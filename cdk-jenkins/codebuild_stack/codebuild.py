@@ -170,6 +170,7 @@ class CodeBuildStack(Stack):
                 iam.ManagedPolicy.from_aws_managed_policy_name("AmazonSSMFullAccess"),
                 iam.ManagedPolicy.from_aws_managed_policy_name("AmazonECS_FullAccess"),
                 iam.ManagedPolicy.from_aws_managed_policy_name("AmazonEC2ContainerRegistryFullAccess"),
+                iam.ManagedPolicy.from_aws_managed_policy_name("AmazonS3FullAccess")
             ]
         )
         iam.Policy.attach_to_role(policy, role=codebuild_role)
